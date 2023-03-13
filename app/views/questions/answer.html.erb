@@ -1,0 +1,19 @@
+<% if @answer.include?("?") %>
+<% coach = "Silly question, get dressed and go to work!"%>
+<% elsif @answer == "I am going to work" %>
+<% coach = "Great!"%>
+<% else %>
+<% coach = "I don't care, get dressed and go to work"%>
+<% end %>
+
+<div class="user-text-container">
+  <%= @answer %>
+  <em><%= "- You"%></em>
+</div>
+
+<div class="coach-text-container">
+  <%= coach %>
+  <em><%= "- Your coach"%></em>
+</div>
+
+<%= link_to "Ask a new question", "/ask"%>
